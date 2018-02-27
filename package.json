@@ -1,0 +1,18 @@
+{
+  "name": "dojot-iotagent",
+  "version": "1.0.0",
+  "description": "Base iotagent functionality for dojot",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matheus Magalhaes",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "axios": "^0.17.1",
+    "js-base64": "^2.3.2",
+    "kafka-node": "^2.3.0",
+    "ttl-mem-cache": "^4.0.0",
+    "uuid": "^3.2.1"
+  }
+}
