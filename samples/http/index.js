@@ -3,15 +3,32 @@
 var iotagent = require('dojot-iotagent');
 var express = require('express');
 var bodyParser = require('body-parser');
+var util = require("util");
 
 const app = express();
 app.use(bodyParser.json()); // for parsing application/json
 
 const iota = new iotagent.IoTAgent();
 
-
 /* Initializes iotagent library, allowing us to receive notifications from dojot */
 iota.init();
+
+/* Example code for tests (produces 100000 messages for performance check ) */
+console.log(`is producer connected: ${iota.producer.isReady}`);
+iota.producer.registerSubject("device-data", "admin").then(() => {
+  let i = 0;
+  while (i < 100000) {
+    iota.updateAttrs("9532be", "admin", { "teste": i }, {});
+    i++;
+
+    // if (i % 100 == 0) {
+    //   console.log(`send ${i} messages`);
+    // }
+  }
+}).catch((error) => {
+  console.log(`error: ${util.inspect(error, {depth: null})}`);
+});
+
 
 /*
   The following iota calls may be used for initializing the agent.
