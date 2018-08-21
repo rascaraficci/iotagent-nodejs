@@ -1,6 +1,6 @@
 "use strict";
 
-var iotagent = require('dojot-iotagent');
+var iotagent = require('../../lib/index');
 var express = require('express');
 var bodyParser = require('body-parser');
 var util = require("util");
