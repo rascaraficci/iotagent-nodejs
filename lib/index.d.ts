@@ -3,8 +3,6 @@ declare module 'dojot-iotagent' {
     constructor (config?: any);
 
     init(): void;
-    initConsumer(): void;
-    initProducer(): void;
 
     getDevice(deviceid: string, tenant: string): Promise<any>;
     listDevices(tenant: string, query?: any): Promise<any>;

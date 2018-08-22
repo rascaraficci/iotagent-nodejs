@@ -1,6 +1,6 @@
 {
-  "name": "dojot-iotagent",
-  "version": "1.0.0",
+  "name": "@dojot/iotagent-nodejs",
+  "version": "2.0.0-alpha.1",
   "description": "Base iotagent functionality for dojot",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -10,6 +10,7 @@
   "author": "Matheus Magalhaes",
   "license": "GPL-3.0",
   "dependencies": {
+    "@dojot/dojot-module": "0.0.1-alpha.1",
     "axios": "^0.17.1",
     "js-base64": "^2.3.2",
     "kafka-node": "^2.3.0",
