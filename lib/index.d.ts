@@ -10,5 +10,6 @@ declare module 'dojot-iotagent' {
 
     setOnline(deviceid: string, tenant:string, expires:Date): void;
     setOffline(deviceid: string, tenant:string): void;
+    on(subject: string, event: string, callback: (tenant: string, data: any) => void): void;
   }
 }
