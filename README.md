@@ -88,6 +88,80 @@ iotagent.init().then(() => {
 });
 ```
 
+Device events have the following format:
+
+- device.create:
+
+```json
+{
+  "event": "create",
+  "meta": {
+    "service": "admin"
+  },
+  "data": {
+    "id": "efac",
+    "label" : "Device 1",
+    "templates" : [ 1, 2, 3],
+    "attrs" : {
+
+    },
+    "created" : "2018-02-06T10:43:40.890330+00:00"
+  }
+}
+```
+
+- device.update:
+
+```json
+{
+  "event": "update",
+  "meta": {
+    "service": "admin"
+  },
+  "data": {
+    "id": "efac",
+    "label" : "Device 1",
+    "templates" : [ 1, 2, 3],
+    "attrs" : {
+
+    },
+    "created" : "2018-02-06T10:43:40.890330+00:00"
+  }
+}
+```
+
+- device.remove:
+
+```json
+{
+  "event": "remove",
+  "meta": {
+    "service": "admin"
+  },
+  "data": {
+    "id": "efac"
+  }
+}
+```
+
+- device.configure:
+
+```json
+{
+  "event": "configure",
+  "meta": {
+    "service": "admin"
+  },
+  "data" : {
+    "id" : "efac",
+    "attrs": {
+      "reset" : 1,
+      "step-motor" : "+45"
+    }
+  }
+}
+```
+
 In order to execute this code, the following environment variables can be set:
 
 ```bash
