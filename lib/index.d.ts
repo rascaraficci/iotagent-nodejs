@@ -8,6 +8,8 @@ declare module '@dojot/iotagent-nodejs' {
     setOnline(deviceid: string, tenant:string, expires:Date): void;
     setOffline(deviceid: string, tenant:string): void;
     on(subject: string, event: string, callback: (tenant: string, data: any) => void): void;
+    getTenants(): Promise<string[]>;
+    generateDeviceCreateEventForActiveDevices(): void;
   }
   
   export class UnknownDeviceError extends Error {}
