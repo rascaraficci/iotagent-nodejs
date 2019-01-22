@@ -166,18 +166,13 @@ In order to execute this code, the following environment variables can be set:
 
 ```bash
 # These are the default values
-
-# Name or IP address where Auth service can be accessed
-export AUTH_HOST=auth
-# Name or IP address where Kafka service can be accessed
-export KAFKA_HOST=kafka
-# Name or IP address where DataBroker service can be accessed
-export DATA_BROKER_HOST=data-broker
-# Name or IP address where DeviceManager service can be accessed
-export DEVICE_MANAGER_HOST=device-manager
-
-export AUTH_URL=http://${AUTH_HOST}:5000
-export KAFKA_HOSTS=${KAFKA_HOST}:9092
-export DATA_BROKER_URL=http://${DATA_BROKER_HOST}
-export DEVICE_MANAGER_URL=http://${DEVICE_MANAGER_HOST}:5000
+export KAFKA_HOSTS="kafka:9092"
+export KAFKA_GROUP_ID="iotagent"
+export DATA_BROKER_URL="http://data-broker"
+export AUTH_URL="http://auth:5000"
+export DEVICE_MANAGER_URL="http://device-manager:5000"
 ```
+It is important to notice that KAFKA_GROUP_ID variable must be set to something
+different, as this is used by Kafka to select which clients will receive messages
+from a particular topic. If not set, all services that uses the same ID will
+be selected at random to receive messages, which is probably not what you want.
