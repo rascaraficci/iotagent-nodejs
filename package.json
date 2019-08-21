@@ -1,6 +1,6 @@
 {
   "name": "@dojot/iotagent-nodejs",
-  "version": "2.1.0-beta.4",
+  "version": "2.1.0-beta.5",
   "description": "Base iotagent functionality for dojot",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -26,7 +26,6 @@
     "@dojot/dojot-module-logger": "0.0.1-alpha.5",
     "axios": "^0.17.1",
     "js-base64": "^2.3.2",
-    "kafka-node": "^2.3.0",
     "uuid": "^3.2.1"
   }
 }
