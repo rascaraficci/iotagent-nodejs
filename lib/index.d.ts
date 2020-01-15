@@ -4,10 +4,10 @@ declare module '@dojot/iotagent-nodejs' {
     init(): Promise<any>;;
     getDevice(deviceid: string, tenant: string): Promise<any>;
     checkCompleteMetaFields(deviceid: string, tenant: string, metadata: any): any;
-    updateAttrs(deviceid: string, tenant: string, attrs: any, metadata?: any): void;
+    updateAttrs(deviceid: string, tenant: string, attrs: any, metadata: any, key?: string | null): void;
     setOnline(deviceid: string, tenant:string, expires:Date): void;
     setOffline(deviceid: string, tenant:string): void;
-    on(subject: string, event: string, callback: (tenant: string, data: any) => void): void;
+    on(subject: string, event: string, callback: (tenant: string, data: any, extraInfo?: any) => void): void;
     getTenants(): Promise<string[]>;
     generateDeviceCreateEventForActiveDevices(): void;
   }
