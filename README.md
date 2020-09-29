@@ -15,9 +15,9 @@ npm install @dojot/iotagent-nodejs
 
 ## How to use
 
-This library has one main function, which is `updateAttr`. Furthermore, it
+This library has one main function, which is `updateAttrs`. Furthermore, it
 also generated events "device.create", "device.remove", "device.update",
-and "device.configure" in "iotagent.device" subject. The `updateAttr` function
+and "device.configure" in "iotagent.device" subject. The `updateAttrs` function
 and all events are shown in the folloing code.
 
 ```javascript
@@ -37,7 +37,7 @@ iotagent.init().then(() => {
         logger.debug(`Data is: ${util.inspect(event)}`);
         logger.debug('Got configure event from Device Manager', event)
         // This is just to get one valid device ID to be used in
-        // updateAttr sample.
+        // updateAttrs sample.
         deviceId = event.data.id;
     });
 
