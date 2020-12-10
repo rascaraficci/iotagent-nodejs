@@ -1,11 +1,12 @@
 {
   "name": "@dojot/iotagent-nodejs",
-  "version": "2.1.0-beta.10",
+  "version": "2.2.0",
   "description": "Base iotagent functionality for dojot",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check-licenses": "apache2-license-checker"
   },
   "repository": {
     "type": "git",
@@ -16,16 +17,38 @@
     "iot"
   ],
   "author": "Matheus Magalhaes",
+  "contributors": [
+    "Giovanni Curiel dos Santos",
+    "Raul Negreiros",
+    "Mariane Previde ",
+    "Rafael Augusto Scaraficci",
+    "Anderson Luis Ribeiro",
+    "Jonaphael Aristil",
+    "Eric Baum",
+    "Elias Reis",
+    "Muhamed Avila",
+    "Joab Ramazoto Nunes",
+    "Vinícius do Carmo"
+  ],
   "bugs": {
     "url": "https://github.com/dojot/iotagent-nodejs/issues"
   },
   "homepage": "https://github.com/dojot/iotagent-nodejs/#readme",
-  "license": "GPL-3.0",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
   "dependencies": {
-    "@dojot/dojot-module": "0.0.1-beta.9",
-    "@dojot/dojot-module-logger": "0.0.1-alpha.5",
+    "@dojot/dojot-module": "^0.1.1",
+    "@dojot/dojot-module-logger": "^0.1.0",
     "axios": "^0.17.1",
     "js-base64": "^2.3.2",
     "uuid": "^3.2.1"
+  },
+  "devDependencies": {
+    "@bbc/apache2-license-checker": "^1.1.4"
   }
 }
